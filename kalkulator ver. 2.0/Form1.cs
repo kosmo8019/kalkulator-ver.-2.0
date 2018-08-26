@@ -42,7 +42,7 @@ namespace kalkulator_ver._2._0
         private void operatorClick(object sender, EventArgs e)
         {
             Button b = (Button)sender;
-            operation = result.Text;
+            operation = b.Text;
 
             value = double.Parse(result.Text);
             operationPressed = true;
@@ -62,14 +62,27 @@ namespace kalkulator_ver._2._0
                     break;
 
                 case "*":
-                    result.Text = (value + double.Parse(result.Text)).ToString();
+                    result.Text = (value * double.Parse(result.Text)).ToString();
                     break;
 
                 case "/":
-                    result.Text = (value + double.Parse(result.Text)).ToString();
+                    result.Text = (value / double.Parse(result.Text)).ToString();
                     break;
 
+                default:
+                    break;
             }
+
+            operationPressed = false;
+
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            result.Clear();
+            value = 0;
+
         }
     }
 }
