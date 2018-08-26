@@ -47,6 +47,7 @@
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.result = new System.Windows.Forms.TextBox();
+            this.equation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -257,11 +258,23 @@
             this.result.Text = "0";
             this.result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // equation
+            // 
+            this.equation.AutoSize = true;
+            this.equation.BackColor = System.Drawing.SystemColors.Window;
+            this.equation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.equation.ForeColor = System.Drawing.SystemColors.Control;
+            this.equation.Location = new System.Drawing.Point(7, 15);
+            this.equation.Name = "equation";
+            this.equation.Size = new System.Drawing.Size(0, 16);
+            this.equation.TabIndex = 19;
+            // 
             // kalkulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(268, 272);
+            this.Controls.Add(this.equation);
             this.Controls.Add(this.result);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
@@ -312,6 +325,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.TextBox result;
+        private System.Windows.Forms.Label equation;
     }
 }
 

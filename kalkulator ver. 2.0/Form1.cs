@@ -47,10 +47,14 @@ namespace kalkulator_ver._2._0
             value = double.Parse(result.Text);
             operationPressed = true;
 
+            equation.Text = value + " " + operation;
+
+
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
+            equation.Text = "";
             switch(operation)
             {
                 case "+":
