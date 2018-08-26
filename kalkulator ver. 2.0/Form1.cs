@@ -24,12 +24,13 @@ namespace kalkulator_ver._2._0
 
         private void buttonClick(object sender, EventArgs e)
         {
-            if ((result.Text == "0") || (operationPressed))
+            if (result.Text == "0") //|| (operationPressed ))
                 result.Clear();
 
-            Button b = (Button)sender;
-            result.Text = result.Text + b.Text;
-
+                Button b = (Button)sender;
+                result.Text = result.Text + b.Text;
+            
+            
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -48,6 +49,8 @@ namespace kalkulator_ver._2._0
             operationPressed = true;
 
             equation.Text = value + " " + operation;
+
+            result.Clear();
 
 
         }
@@ -84,9 +87,10 @@ namespace kalkulator_ver._2._0
 
         private void button17_Click(object sender, EventArgs e)
         {
-            result.Clear();
+            result.Text = "0";
             value = 0;
 
         }
+
     }
 }
