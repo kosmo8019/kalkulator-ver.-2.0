@@ -16,5 +16,12 @@ namespace kalkulator_ver._2._0
         {
             InitializeComponent();
         }
+
+        private void buttonClick(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            result.Text = result.Text + b.Text;
+
+        }
     }
 }
